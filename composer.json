@@ -1,5 +1,12 @@
 {
   "name": "laravel/laravel",
+  "authors": [
+    {
+      "name": "Vurghus Minar",
+      "email": "vurghus.minar@outlook.com",
+      "homepage": "https://github.com/vurghus-minar"
+    }
+  ],
   "description": "The Laravel Framework.",
   "keywords": [
     "framework",
