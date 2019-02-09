@@ -65,11 +65,11 @@ php artisan passport:install
 
 Once completed select the copy Client 2 secret from the oauth_clients database table
 
-![copy Client 2 secret](https://prnt.sc/mir8t4)
+![copy Client 2 secret](https://github.com/vurghus-minar/laravelAPIServer/raw/master/ss1.png)
 
 Paste the secret key in `.env` file
 
-![paste Client 2 secret](https://prnt.sc/mirc2t)
+![paste Client 2 secret](https://github.com/vurghus-minar/laravelAPIServer/raw/master/ss2.png)
 
 Set up dummy Users:
 
