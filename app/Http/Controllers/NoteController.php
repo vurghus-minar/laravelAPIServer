@@ -90,8 +90,13 @@ class NoteController extends Controller
             return response()->json('There was an error processing your request', 500);
         }
 
-        if ($note->user_id !== auth()->user()->id) {
-            return response()->json('Unauthorized', 401);
+        $noteUserId = (int)$note->user_id;
+        $authUserId = (int)auth()->user()->id;
+        
+        if ($noteUserId !== $authUserId) {
+            return response()->json(
+                'Unauthorized action', 401
+            );
         }
 
         $note->id = $request->input('id');
@@ -142,8 +147,13 @@ class NoteController extends Controller
             return response()->json('There was an error processing your request', 500);
         }
 
-        if ($note->user_id !== auth()->user()->id) {
-            return response()->json('Unauthorized action', 401);
+        $noteUserId = (int)$note->user_id;
+        $authUserId = (int)auth()->user()->id;
+        
+        if ($noteUserId !== $authUserId) {
+            return response()->json(
+                'Unauthorized action', 401
+            );
         }
 
         try {
